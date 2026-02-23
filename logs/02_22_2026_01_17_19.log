@@ -1,0 +1,23 @@
+[ 2026-02-22 01:17:20,575 ] 22 root - INFO - Data Ingestion Started
+[ 2026-02-22 01:17:20,743 ] 25 root - INFO - Data Ingested Successfully
+[ 2026-02-22 01:17:21,761 ] 31 root - INFO - Train Test Split Initiated
+[ 2026-02-22 01:17:22,800 ] 37 root - INFO - Ingestion of Data Completed
+[ 2026-02-22 01:17:22,806 ] 13 root - INFO - Data Ingestion Completed: Train Data Path: Artifacts\train.csv, Test Data Path: Artifacts\test.csv
+[ 2026-02-22 01:17:22,806 ] 59 root - INFO - Initiating Data Transformation
+[ 2026-02-22 01:17:23,041 ] 63 root - INFO - Reading Train and Test Data Completed
+[ 2026-02-22 01:17:23,053 ] 67 root - INFO - Dropping ID column from Train and Test Data Completed
+[ 2026-02-22 01:17:23,057 ] 27 root - INFO - Data Transformation Started
+[ 2026-02-22 01:17:23,057 ] 50 root - INFO - Data Transformation Completed
+[ 2026-02-22 01:17:23,216 ] 82 root - INFO - Applying Preprocessor on Train and Test Data Completed
+[ 2026-02-22 01:17:23,216 ] 87 root - INFO - Preprocessor Object Saved
+[ 2026-02-22 01:17:23,232 ] 46 root - INFO - Initiating Model Training
+[ 2026-02-22 01:17:23,232 ] 25 root - INFO - Model Evaluation Started
+[ 2026-02-22 01:17:23,314 ] 35 root - INFO - Linear Regression R2 Score: 0.9372975155452961
+[ 2026-02-22 01:17:23,338 ] 35 root - INFO - Ridge Regression R2 Score: 0.9372968620700983
+[ 2026-02-22 01:17:24,286 ] 35 root - INFO - Lasso Regression R2 Score: 0.9372637996466201
+[ 2026-02-22 01:17:25,490 ] 35 root - INFO - Decision Tree R2 Score: 0.9565981656989193
+[ 2026-02-22 01:18:45,399 ] 35 root - INFO - Random Forest R2 Score: 0.9772001650286207
+[ 2026-02-22 01:19:03,537 ] 35 root - INFO - Gradient Boosting R2 Score: 0.9761298119531986
+[ 2026-02-22 01:19:03,537 ] 37 root - INFO - Model Evaluation Completed
+[ 2026-02-22 01:19:03,537 ] 69 root - INFO - Best Model: Random Forest with R2 Score: 0.9772001650286207
+[ 2026-02-22 01:19:14,479 ] 74 root - INFO - Best Model Saved at: Artifacts\model.pkl

@@ -1,0 +1,12 @@
+[ 2026-02-21 18:33:24,994 ] 22 root - INFO - Data Ingestion Started
+[ 2026-02-21 18:33:25,213 ] 25 root - INFO - Data Ingested Successfully
+[ 2026-02-21 18:33:26,259 ] 31 root - INFO - Train Test Split Initiated
+[ 2026-02-21 18:33:27,655 ] 37 root - INFO - Ingestion of Data Completed
+[ 2026-02-21 18:33:27,669 ] 12 root - INFO - Data Ingestion Completed: Train Data Path: Artifacts\train.csv, Test Data Path: Artifacts\test.csv
+[ 2026-02-21 18:33:27,669 ] 59 root - INFO - Initiating Data Transformation
+[ 2026-02-21 18:33:27,976 ] 63 root - INFO - Reading Train and Test Data Completed
+[ 2026-02-21 18:33:27,991 ] 67 root - INFO - Dropping ID column from Train and Test Data Completed
+[ 2026-02-21 18:33:28,001 ] 27 root - INFO - Data Transformation Started
+[ 2026-02-21 18:33:28,001 ] 50 root - INFO - Data Transformation Completed
+[ 2026-02-21 18:33:28,185 ] 82 root - INFO - Applying Preprocessor on Train and Test Data Completed
+[ 2026-02-21 18:33:28,187 ] 87 root - INFO - Preprocessor Object Saved

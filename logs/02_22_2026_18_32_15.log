@@ -1,0 +1,20 @@
+[ 2026-02-22 18:32:17,570 ] 22 root - INFO - Data Ingestion Started
+[ 2026-02-22 18:32:17,777 ] 25 root - INFO - Data Ingested Successfully
+[ 2026-02-22 18:32:18,763 ] 31 root - INFO - Train Test Split Initiated
+[ 2026-02-22 18:32:20,010 ] 37 root - INFO - Ingestion of Data Completed
+[ 2026-02-22 18:32:20,016 ] 13 root - INFO - Data Ingestion Completed: Train Data Path: Artifacts\train.csv, Test Data Path: Artifacts\test.csv
+[ 2026-02-22 18:32:20,018 ] 59 root - INFO - Initiating Data Transformation
+[ 2026-02-22 18:32:20,273 ] 63 root - INFO - Reading Train and Test Data Completed
+[ 2026-02-22 18:32:20,292 ] 67 root - INFO - Dropping ID column from Train and Test Data Completed
+[ 2026-02-22 18:32:20,294 ] 27 root - INFO - Data Transformation Started
+[ 2026-02-22 18:32:20,294 ] 50 root - INFO - Data Transformation Completed
+[ 2026-02-22 18:32:20,489 ] 82 root - INFO - Applying Preprocessor on Train and Test Data Completed
+[ 2026-02-22 18:32:20,495 ] 87 root - INFO - Preprocessor Object Saved
+[ 2026-02-22 18:32:20,500 ] 63 root - INFO - Model Training Started
+[ 2026-02-22 18:32:41,487 ] 54 root - INFO - Linear Regression -> R2: 0.9373, MAE: 671.5856
+[ 2026-02-22 18:32:46,004 ] 54 root - INFO - Ridge Regression -> R2: 0.9373, MAE: 671.6137
+[ 2026-02-22 18:32:51,538 ] 54 root - INFO - Lasso Regression -> R2: 0.9373, MAE: 672.8635
+[ 2026-02-22 18:32:57,647 ] 54 root - INFO - Decision Tree -> R2: 0.9572, MAE: 422.2600
+[ 2026-02-22 18:34:50,315 ] 54 root - INFO - Random Forest -> R2: 0.9771, MAE: 309.5042
+[ 2026-02-22 18:35:13,088 ] 54 root - INFO - Gradient Boosting -> R2: 0.9761, MAE: 331.4097
+[ 2026-02-22 18:35:22,007 ] 97 root - INFO - Best model Random Forest saved successfully
