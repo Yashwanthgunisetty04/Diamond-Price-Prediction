@@ -1,0 +1,8 @@
+venv/
+Artifacts/
+mlruns/
+__pycache__/
+*.pyc
+.dvc/cache
+DiamondPricePrediction.egg-info/
+logs/
