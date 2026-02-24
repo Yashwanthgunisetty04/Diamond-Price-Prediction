@@ -1,0 +1,70 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/DiamondPricePrediction/components/data_ingestion.py
+    deps:
+    - path: Data/raw/train.csv
+      hash: md5
+      md5: 14ddfc56c931255ee10d3859d0ac4fc0
+      size: 10462804
+    - path: src/DiamondPricePrediction/components/data_ingestion.py
+      hash: md5
+      md5: 3e589dd4ef5b204e2b479f03a7f484be
+      size: 1908
+    outs:
+    - path: Artifacts/raw.csv
+      hash: md5
+      md5: 4d3b99278017349368e70a85aa43bd7d
+      size: 10656378
+    - path: Artifacts/test.csv
+      hash: md5
+      md5: 3005b1e68be30d5e5dc0e165a02ae51f
+      size: 2131687
+    - path: Artifacts/train.csv
+      hash: md5
+      md5: ab82647c5164d0a72e29d184ac7ed107
+      size: 8524743
+  data_transformation:
+    cmd: python src/DiamondPricePrediction/components/data_transformation.py
+    deps:
+    - path: Artifacts/test.csv
+      hash: md5
+      md5: 3005b1e68be30d5e5dc0e165a02ae51f
+      size: 2131687
+    - path: Artifacts/train.csv
+      hash: md5
+      md5: ab82647c5164d0a72e29d184ac7ed107
+      size: 8524743
+    - path: src/DiamondPricePrediction/components/data_transformation.py
+      hash: md5
+      md5: 1aa03106bb5b36622dc0d59ddc4eb74c
+      size: 4009
+    outs:
+    - path: Artifacts/preprocessor.pkl
+      hash: md5
+      md5: 5f3a376aeedb483969cd4a5be32cf5aa
+      size: 2549
+  model_training:
+    cmd: python src/DiamondPricePrediction/components/model_trainer.py
+    deps:
+    - path: Artifacts/preprocessor.pkl
+      hash: md5
+      md5: 5f3a376aeedb483969cd4a5be32cf5aa
+      size: 2549
+    - path: Artifacts/test.csv
+      hash: md5
+      md5: 3005b1e68be30d5e5dc0e165a02ae51f
+      size: 2131687
+    - path: Artifacts/train.csv
+      hash: md5
+      md5: ab82647c5164d0a72e29d184ac7ed107
+      size: 8524743
+    - path: src/DiamondPricePrediction/components/model_trainer.py
+      hash: md5
+      md5: dd2299d8b28dd16beb0e42726ab388cc
+      size: 4148
+    outs:
+    - path: Artifacts/model.pkl
+      hash: md5
+      md5: e33d8ee369edb0b9248f9d4c76e8fcee
+      size: 1326378301

@@ -100,3 +100,18 @@ class ModelTrainer:
 
         except Exception as e:
             raise CustomException(e, sys)
+        
+        
+if __name__ == "__main__":
+    from src.DiamondPricePrediction.components.data_transformation import DataTransformation
+
+    # Load transformed data
+    data_transformation = DataTransformation()
+    X_train, y_train, X_test, y_test, preprocessor_path = data_transformation.initiate_data_transformation(
+        "Artifacts/train.csv",
+        "Artifacts/test.csv"
+    )
+
+    # Train models
+    obj = ModelTrainer()
+    obj.initiate_model_training(X_train, y_train, X_test, y_test)

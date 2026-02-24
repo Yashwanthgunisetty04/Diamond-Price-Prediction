@@ -6,3 +6,4 @@ __pycache__/
 .dvc/cache
 DiamondPricePrediction.egg-info/
 logs/
+mlflow.db

@@ -1,0 +1,29 @@
+stages:
+  data_ingestion:
+    cmd: python src/DiamondPricePrediction/components/data_ingestion.py
+    deps:
+      - src/DiamondPricePrediction/components/data_ingestion.py
+      - Data/raw/train.csv
+    outs:
+      - Artifacts/train.csv
+      - Artifacts/test.csv
+      - Artifacts/raw.csv
+
+  data_transformation:
+    cmd: python src/DiamondPricePrediction/components/data_transformation.py
+    deps:
+      - src/DiamondPricePrediction/components/data_transformation.py
+      - Artifacts/train.csv
+      - Artifacts/test.csv
+    outs:
+      - Artifacts/preprocessor.pkl
+
+  model_training:
+    cmd: python src/DiamondPricePrediction/components/model_trainer.py
+    deps:
+      - src/DiamondPricePrediction/components/model_trainer.py
+      - Artifacts/train.csv
+      - Artifacts/test.csv
+      - Artifacts/preprocessor.pkl
+    outs:
+      - Artifacts/model.pkl

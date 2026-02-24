@@ -1,0 +1,9 @@
+venv/
+mlruns/
+logs/
+.git/
+.dvc/
+__pycache__/
+*.pyc
+Notebook_Experiments/
+DiamondPricePrediction.egg-info/
