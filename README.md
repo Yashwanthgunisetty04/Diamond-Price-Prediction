@@ -126,7 +126,7 @@ DVC intelligently reruns only the stages that changed!
 
 **Yashwanth**
 - GitHub: [@Yashwanthgunisetty04](https://github.com/Yashwanthgunisetty04)
-- LinkedIn: [Your LinkedIn URL]
+
 
 ## 📝 License
 
